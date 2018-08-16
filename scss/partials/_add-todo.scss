@@ -1,0 +1,22 @@
+.add-todo {
+    @include secondary-row();
+    &__square {
+        @include secondary-square();
+        color: lighten(#000, 50%);
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+            transition: 0.1s;
+            font-size: 120%;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    &__input {
+        @include secondary-text();
+        margin-right: 15px;
+    }
+}

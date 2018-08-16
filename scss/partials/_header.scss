@@ -1,0 +1,30 @@
+.todo-list-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $border;
+    background-color: $main-header;
+
+    &__square {
+        height: 36px;
+        width: 35px;
+        border-right: 1px solid $vertical-header;
+        margin-right: 2px;
+        flex-shrink: 0;
+    }
+
+    &__title {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 36px;
+        border-left: 1px solid $vertical-header;
+        width: 300px;
+        margin-left: 2px;
+        padding: 10px;
+        font-size: $title-size;
+        font-weight: bold;
+        color: $header-title;
+    }
+}

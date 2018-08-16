@@ -1,0 +1,13 @@
+.hidden {
+    display: none;
+}
+
+.tick {
+    width: 3px;
+    height: 5px;
+    border: 1px solid #acc04e;
+    border-top: none;
+    border-left: none;
+    margin-bottom: 1px;
+    transform:rotate(45deg);
+}

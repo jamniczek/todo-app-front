@@ -1,0 +1,51 @@
+.todo {
+    @include secondary-row();
+
+    &__square {
+    @include secondary-square();
+        &__checkbox {
+            position: absolute;
+            opacity: 0;
+            width: 9px;
+            height: 9px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        &__checkbox-styled {
+            flex-shrink: 0;
+            width: 9px;
+            height: 9px;
+            border: 1px solid $border;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    };
+    &__text {
+        @include secondary-text();
+    }
+    &__trash {
+        min-width: 35px;
+        background-image: url(trash.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+}
+
+.todo--complete {
+    .todo__text {
+        text-decoration: line-through;
+        color: lighten(#000, 50%);
+    }
+    .todo__trash {
+        opacity: 50%;
+    }
+    .todo__trash__layer{
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #fff, $alpha: .5);
+
+    }
+}
